@@ -33,9 +33,9 @@ app.get("/weather", (req, res) => {
   // res.send({ cityArr });
 });
 
-// app.get("*", (req, res) => {
-//   res.status(404).send("page not found");
-// });
+app.get("*", (req, res) => {
+  res.status(404).send("page not found");
+});
 
 function errorHandeler(error, res) {
   res.status(500).send({ error: "something went wrong" });
